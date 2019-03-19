@@ -23,12 +23,18 @@ class TodoList extends React.Component {
         this.props.addNewTodo(this.state.newTodo)
     }
 
+    toggleTodo = (e, id) => {
+        console.log('selected', id)
+        e.preventDefault();
+        this.props.toggleTodo(id)
+    }
+
     render() {
         return (
         <>
             <div className="todo-list">
             {this.props.todos.map((todo, id) => (
-                <h3 key={id}>
+                <h3 onClick={e => this.toggleTodo(e, id)} key={id}>
                     {todo.value}
                     {todo.completed}
                 </h3>
