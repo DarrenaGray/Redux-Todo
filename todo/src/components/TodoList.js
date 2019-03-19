@@ -35,7 +35,8 @@ class TodoList extends React.Component {
             <div className="todo-list">
             {this.props.todos.map((todo, id) => (
                 <ul onClick={e => this.toggleTodo(e, id)} key={id}>
-                    <li>{todo.value}</li>
+                    <li><strong>{todo.value}</strong></li>
+                    {todo.completed}
                 </ul>
             ))}
 
