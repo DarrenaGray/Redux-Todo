@@ -34,10 +34,9 @@ class TodoList extends React.Component {
         <>
             <div className="todo-list">
             {this.props.todos.map((todo, id) => (
-                <h3 onClick={e => this.toggleTodo(e, id)} key={id}>
-                    {todo.value}
-                    {todo.completed}
-                </h3>
+                <ul onClick={e => this.toggleTodo(e, id)} key={id}>
+                    <li>{todo.value}</li>
+                </ul>
             ))}
 
             </div>                
@@ -45,6 +44,7 @@ class TodoList extends React.Component {
               type="text"
               value={this.state.newTodo}
               onChange={this.handleChange}
+              placeholder="Enter new todo item"
             />
             <button onClick={this.addTodo}>Add todo</button>
         </>
