@@ -1,0 +1,7 @@
+/* p {
+    color: red;
+  } */
+  
+  .todo .done {
+      text-decoration: line-through;
+  }
