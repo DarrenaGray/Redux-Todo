@@ -26,13 +26,12 @@ class TodoList extends React.Component {
     }
 
     toggleTodo = id => {
-        console.log(id)
-        this.props.toggleTodo(id)
+        console.log(id);
+        this.props.toggleTodo(id);
     }
 
-    deleteTodo = id => {
-        console.log(id)
-        this.props.deleteTodo(id)
+    deleteTodo = () => {
+        this.props.deleteTodo();
     }
 
 
